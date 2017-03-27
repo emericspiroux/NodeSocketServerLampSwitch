@@ -39,7 +39,7 @@ io.on('connection', function(socket){
 	changeLampState(isOn);
   }	
 
-  socket.on('change gyro', function(value){
+  socket.on('switch lamp', function(value){
 	console.log("Switch light !");
 	changeLampState(isOn);
   });
@@ -50,6 +50,6 @@ io.on('connection', function(socket){
 
 });
 
-http.listen(8080, function(){
-  console.log('listening on *:8080');
+http.listen(3000, function(){
+  console.log('listening on *:3000');
 });
